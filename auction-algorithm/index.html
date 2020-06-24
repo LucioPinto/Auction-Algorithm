@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Algoritmo de Leilão</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" id="favicon" href="img/lei.png">   
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>           
+            <p>Algoritmo de Leilão</p>            
+        </header>
+
+        <aside>
+            <div class="box-aside">
+                <h2>Lógica do algoritmo</h2>
+                <ul>        
+                    <br>           
+                    <li>Cada origem é vista como como pessoa i, e cada destino como o objeto j em um leilão.</li>
+                    <br>
+                    <li>Cada pessoa i possui um interesse a<sub>ij</sub> por um objeto j, que inicialmente tem um preço p<sub>j</sub>.</li>
+                    <br>
+                    <li>O valor real de um objeto j para uma pessoa i é: <br>v<sub>r</sub> = a<sub>ij</sub>- p<sub>j</sub></li>
+                    <br>  
+                    <br>                  
+                </ul>
+                <h2>Satisfação e condição de parada</h2>
+                <ul>     
+                    <br>              
+                    <li>Uma pessoa estará satisfeita se ela sempre ficar alocada ao objeto que traga o maior valor real: <br>v<sub>r</sub> = max {a<sub>ij</sub>– p<sub>j</sub>} | j = {1, 2, ... n} </li>
+                    <br>
+                    <li>Objetivo é otimizar as atribuições, considerando o custo/benefício de cada relação (pessoa → objeto).</li>
+                    <br>                 
+                </ul>
+            </div>
+        </aside>
+
+        <div class="content">
+            <div class="titleDiv">
+                <h1>Problema de Atribuição</h1>
+            </div>
+            <div class="dimensionsDiv">
+                <p>N<sup>o</sup> de Pessoas:  </p>
+                <input type="number" id="inputPeople">
+                <p>N<sup>o</sup> de Objetos:  </p>
+                <input type="number" id="inputObjects">
+                <button id="createTableBt" onclick="createTable()">Criar Tabela</button>
+            </div>
+            <div class="inputDiv">
+                <p id="inputDivParagraph" style="display: none;">ε:  </p>
+                <input type="number" id="inputDivInput" style="display: none;">
+                <button id="randomBt" onclick="random()" style="display: none;">Preencher automático</button>
+            </div>
+            <div class="table-responsive">
+                <table id="table" style="display: none;">
+                    
+                </table>
+            </div>
+            <div class="buttonDiv">
+                <button id="maxBt" onclick="main()" style="display: none;">Maximizar</button>
+                <button id="minBt" onclick="minimize()" style="display: none;">Minimizar</button>
+            </div>
+            <div class="pDiv" id="paragraphDiv">
+                <p id="paragraph"></p>
+            </div>
+            <div class="reloadDiv">
+                <a href="index.html">
+                    <button id="reloadBt">Recarregar</button>
+                </a>
+            </div>
+        </div>
+        
+        <footer>
+            
+        </footer>
+        
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,224 @@
+body {
+    font-family: Arial;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "cabecalho"
+                "conteudo"
+                "periferico"
+                "rodape";
+    grid-gap: 20px;
+}
+
+header {
+    background-color: #66B2FF;
+    grid-area: cabecalho;
+    height: 1fr;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header p {
+    margin: 0;
+    font-family: Snell Roundhand, cursive;
+    text-align: center;
+    font-size: 42px;
+    color: white;
+}
+
+footer {
+    background-color: #66B2FF;
+    grid-area: rodape;
+    height: 1fr;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p {
+    margin: 0;
+    font-family: Snell Roundhand, cursive;
+    text-align: center;
+    font-size: 21px;
+    color: white;
+}
+
+.content {
+    grid-area: conteudo;
+}
+
+aside {    
+    background-color: #FAFAFA;
+    grid-area: periferico;
+}
+
+.box-aside h2 {
+    text-align: center;
+}
+
+.box-aside ul {
+    padding: 0%;
+}
+
+.box-aside li {
+    list-style-type: none;
+    text-align: justify;
+    padding: 5px;
+}
+
+aside > .box-aside {
+    padding-bottom: 20px;
+}
+
+/* Title */
+div.titleDiv {
+    height: 5em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+div.titleDiv h1 {
+    margin: 0; 
+}
+
+/* Dimensions */
+div.dimensionsDiv {
+    height: 3em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+div.dimensionsDiv input {
+    margin: 0; 
+}
+
+#inputPeople {
+    margin-right: 30px;
+}
+#inputObjects {
+    margin-right: 30px;
+}
+
+/* Input */
+div.inputDiv {
+    height: 3em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+div.inputDiv input {
+    margin: 0; 
+}
+
+#inputDivInput {
+    margin-right: 30px;
+}
+
+/* Table */
+div.table-responsive {
+    height: 20em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+div.table-responsive table {
+    margin: 0; 
+}
+
+table, th{
+    border: 1px solid black;    
+}
+
+table, td {
+    text-align: center;
+}
+
+input {
+    outline: solid 1px transparent;
+    transition: outline 0.3s linear;
+    margin: 0.5em;
+}
+
+input:hover {
+    outline-color: #66B2FF;
+    outline-width: 3px;
+}
+
+/* Buttons */
+div.buttonDiv {
+    height: 3em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+div.buttonDiv button {
+    margin: 0; 
+}
+
+#maxBt {
+    margin-right: 30px;
+}
+
+button {
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #66B2FF;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+/* Paragraph */
+div.pDiv {
+    height: 25em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+div.pDiv p {
+    margin: 0; 
+}
+
+/* Reload */
+div.reloadDiv {
+    height: 3em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+div.reloadDiv button {
+    margin: 0; 
+}
+
+@media (min-width: 900px) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        grid-template-rows: 100px 1fr 100px;
+        grid-template-areas: "cabecalho cabecalho"
+                              "periferico conteudo "
+                              "rodape rodape";
+        grid-gap: 5px 20px;
+    }    
+    aside {    
+        background-color: #FAFAFA;
+    } 
+    .content {
+        display: flex;
+        flex-flow: row wrap;
+    }
+}
